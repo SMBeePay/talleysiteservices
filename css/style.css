@@ -106,6 +106,8 @@ p {
   display: flex;
   align-items: center;
   line-height: 1;
+  flex-shrink: 0;
+  min-width: 0;
 }
 
 .brand:hover {
@@ -115,7 +117,16 @@ p {
 .brand-logo {
   height: 42px;
   width: auto;
+  max-width: 100%;
+  aspect-ratio: 480 / 141;
+  object-fit: contain;
   display: block;
+}
+
+@media (max-width: 420px) {
+  .brand-logo {
+    height: 34px;
+  }
 }
 
 .primary-nav {
@@ -185,9 +196,13 @@ p {
 
 /* Hero */
 .hero {
-  background:
+  background-color: var(--black);
+  background-image:
     linear-gradient(135deg, rgba(11, 11, 12, 0.68) 0%, rgba(23, 23, 26, 0.45) 100%),
-    url("/images/parking-lot-striping-aerial.jpg") center / cover no-repeat;
+    url("/images/parking-lot-striping-aerial.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
   color: var(--white);
   padding: 4.5rem 0;
 }
