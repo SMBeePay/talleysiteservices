@@ -197,10 +197,14 @@ p {
 /* Hero */
 .hero {
   background:
-    linear-gradient(135deg, rgba(11, 11, 12, 0.9) 0%, rgba(23, 23, 26, 0.85) 100%),
+    linear-gradient(135deg, rgba(11, 11, 12, 0.68) 0%, rgba(23, 23, 26, 0.45) 100%),
     url("/images/parking-lot-striping-aerial.jpg") center / cover no-repeat;
   color: var(--white);
   padding: 4.5rem 0;
+}
+
+.hero .lede {
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
 }
 
 .hero .eyebrow {
