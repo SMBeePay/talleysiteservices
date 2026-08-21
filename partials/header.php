@@ -15,7 +15,9 @@ $noindex = $noindex ?? false;
 <meta name="robots" content="noindex, follow">
 <?php endif; ?>
 <link rel="canonical" href="<?= htmlspecialchars($canonical) ?>">
-<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/images/brand/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="/images/brand/favicon-16.png" sizes="16x16" type="image/png">
+<link rel="apple-touch-icon" href="/images/brand/favicon-180.png">
 <meta property="og:title" content="<?= htmlspecialchars($title) ?>">
 <meta property="og:description" content="<?= htmlspecialchars($description) ?>">
 <meta property="og:image" content="<?= htmlspecialchars($ogImage) ?>">
@@ -66,8 +68,10 @@ echo json_encode([
 <header class="site-header">
   <div class="container header-inner">
     <a class="brand" href="/">
-      <span class="brand-name">TALLEY</span>
-      <span class="brand-sub">SITE SERVICES</span>
+      <picture>
+        <source srcset="/images/brand/logo-horizontal.webp" type="image/webp">
+        <img src="/images/brand/logo-horizontal.png" width="480" height="141" alt="Talley Site Services" class="brand-logo">
+      </picture>
     </a>
     <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">
       <span></span><span></span><span></span>

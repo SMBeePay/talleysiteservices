@@ -2,9 +2,11 @@
 <footer class="site-footer">
   <div class="container footer-grid">
     <div>
-      <div class="brand footer-brand">
-        <span class="brand-name">TALLEY</span><br>
-        <span class="brand-sub">SITE SERVICES</span>
+      <div class="footer-brand">
+        <picture>
+          <source srcset="/images/brand/logo-horizontal.webp" type="image/webp">
+          <img src="/images/brand/logo-horizontal.png" width="480" height="141" alt="Talley Site Services" class="brand-logo">
+        </picture>
       </div>
       <p>Commercial Site Repair &amp; Maintenance</p>
       <p class="tagline">Site Maintenance. Done Right.</p>
