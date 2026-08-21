@@ -31,8 +31,8 @@
     <div>
       <h3>Contact</h3>
       <ul>
-        <li><a href="tel:+14692744977">469-274-4977</a></li>
-        <li><a href="mailto:talley.siteservices@gmail.com">talley.siteservices@gmail.com</a></li>
+        <li><a href="tel:+15555550100">555-555-0100</a></li>
+        <li><a href="mailto:info@example.com">info@example.com</a></li>
         <li>Caddo Mills, TX</li>
       </ul>
     </div>

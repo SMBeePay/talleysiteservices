@@ -9,7 +9,7 @@ if (!empty($_GET['error'])) {
     if ($errorCode === 'validation') {
         $errors[] = 'Please fill in your name, phone or email, and a brief message.';
     } elseif ($errorCode === 'send') {
-        $errors[] = 'Something went wrong sending your message. Please call 469-274-4977 or email talley.siteservices@gmail.com directly.';
+        $errors[] = 'Something went wrong sending your message. Please call 555-555-0100 or email info@example.com directly.';
     }
 }
 
@@ -72,8 +72,8 @@ include __DIR__ . '/partials/header.php';
     <aside class="sidebar">
       <h3>Direct Contact</h3>
       <ul>
-        <li><a href="tel:+14692744977">469-274-4977</a></li>
-        <li><a href="mailto:talley.siteservices@gmail.com">talley.siteservices@gmail.com</a></li>
+        <li><a href="tel:+15555550100">555-555-0100</a></li>
+        <li><a href="mailto:info@example.com">info@example.com</a></li>
         <li>Caddo Mills, TX</li>
       </ul>
       <h3>Service Area</h3>

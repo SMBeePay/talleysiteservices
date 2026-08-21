@@ -81,7 +81,9 @@ Development happens on `claude/website-github-hostinger-1u0ar6`. Merge into `mai
 
 ## Contact form
 
-`contact.php` posts to `contact-handler.php`, which validates input, strips header-injection characters, and sends mail via PHP's `mail()` to `talley.siteservices@gmail.com`. A hidden honeypot field filters basic bots.
+`contact.php` posts to `contact-handler.php`, which validates input, strips header-injection characters, and sends mail via PHP's `mail()` to the address in `$recipient` (currently the placeholder `info@example.com` — see note below). A hidden honeypot field filters basic bots.
+
+**Placeholder contact info**: the phone number (`555-555-0100`) and email (`info@example.com`) throughout the site — header, footer, contact page, `contact-handler.php`, and the LocalBusiness schema in `partials/header.php` — are dummy values, not real. Swap these for the real business phone and inbox before launch (search the codebase for both strings to find every occurrence).
 
 **Known limitation**: PHP's `mail()` deliverability on shared hosting can be inconsistent (messages sometimes land in spam). If leads aren't arriving reliably after launch, consider switching to SMTP-based sending (e.g. PHPMailer with Hostinger's SMTP credentials, or a transactional email service).
 

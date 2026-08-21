@@ -16,7 +16,7 @@ include __DIR__ . '/partials/header.php';
 <section class="section">
   <div class="container">
     <p>We've received your request and will follow up shortly. If it's urgent, feel free to call us directly.</p>
-    <a class="btn btn-primary" href="tel:+14692744977">Call 469-274-4977</a>
+    <a class="btn btn-primary" href="tel:+15555550100">Call 555-555-0100</a>
     <a class="btn btn-outline" href="/" style="margin-left:0.75rem;">Back to Home</a>
   </div>
 </section>
