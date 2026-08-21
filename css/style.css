@@ -196,7 +196,9 @@ p {
 
 /* Hero */
 .hero {
-  background: linear-gradient(135deg, var(--black) 0%, var(--near-black) 100%);
+  background:
+    linear-gradient(135deg, rgba(11, 11, 12, 0.9) 0%, rgba(23, 23, 26, 0.85) 100%),
+    url("/images/parking-lot-striping-aerial.jpg") center / cover no-repeat;
   color: var(--white);
   padding: 4.5rem 0;
 }
@@ -399,6 +401,14 @@ section.section-alt {
   width: 10px;
   height: 10px;
   background: var(--red);
+}
+
+.content-img {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+  border: 1px solid var(--gray-200);
+  margin-bottom: 1.75rem;
 }
 
 /* Page hero (interior pages) */

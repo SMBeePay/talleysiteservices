@@ -1,7 +1,8 @@
 <?php
-$title = 'Parking Lot Maintenance in Northeast Dallas-Fort Worth, TX | Talley Site Services';
-$description = 'Ongoing parking lot maintenance in Caddo Mills, Rockwall, McKinney, and Northeast DFW, TX. Keep your commercial lot safe and looking its best year-round. Free estimates.';
+$title = 'Parking Lot Maintenance in Northeast DFW, TX | Talley Site';
+$description = 'Ongoing parking lot maintenance in Caddo Mills, Rockwall, McKinney, and Northeast DFW, TX. Keep your lot safe and looking its best. Free estimates.';
 $canonical = 'https://www.talleysiteservices.com/services/parking-lot-maintenance.php';
+$ogImage = 'https://www.talleysiteservices.com/images/parking-lot-line-striping-closeup.jpg';
 include __DIR__ . '/../partials/header.php';
 ?>
 
@@ -16,6 +17,10 @@ include __DIR__ . '/../partials/header.php';
 <section class="section">
   <div class="container two-col">
     <div>
+      <picture>
+        <source srcset="/images/parking-lot-line-striping-closeup.webp" type="image/webp">
+        <img class="content-img" src="/images/parking-lot-line-striping-closeup.jpg" width="1000" height="1333" loading="lazy" decoding="async" alt="Close-up of freshly painted white parking lot line striping on dark asphalt">
+      </picture>
       <h2>Stay Ahead of Wear and Tear</h2>
       <p>A commercial parking lot is one of the first things customers and tenants see. Regular maintenance keeps it safe, compliant, and presentable &mdash; and helps you avoid the cost of letting small issues turn into major repairs.</p>
 

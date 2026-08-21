@@ -1,6 +1,6 @@
 <?php
-$title = 'Parking Lot Striping & Asphalt Repair in Caddo Mills, TX | Talley Site Services';
-$description = 'Talley Site Services is based in Caddo Mills, TX, providing parking lot striping, asphalt repair, and parking lot maintenance for local commercial properties.';
+$title = 'Parking Lot Striping in Caddo Mills, TX | Talley Site Services';
+$description = 'Talley Site Services offers parking lot striping, asphalt repair, and maintenance for commercial properties in Caddo Mills, TX, our home base. Free estimates.';
 $canonical = 'https://www.talleysiteservices.com/areas-we-serve/caddo-mills-tx.php';
 include __DIR__ . '/../partials/header.php';
 ?>

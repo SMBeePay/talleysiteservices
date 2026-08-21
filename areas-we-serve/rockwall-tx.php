@@ -1,6 +1,6 @@
 <?php
-$title = 'Parking Lot Striping & Asphalt Repair in Rockwall, TX | Talley Site Services';
-$description = 'Talley Site Services provides parking lot striping, asphalt repair, and parking lot maintenance for commercial properties in Rockwall, TX.';
+$title = 'Parking Lot Striping in Rockwall, TX | Talley Site Services';
+$description = 'Talley Site Services offers parking lot striping, asphalt repair, and parking lot maintenance for commercial properties in Rockwall, TX. Free estimates.';
 $canonical = 'https://www.talleysiteservices.com/areas-we-serve/rockwall-tx.php';
 include __DIR__ . '/../partials/header.php';
 ?>

@@ -1,7 +1,8 @@
 <?php
-$title = 'ADA Parking Lot Compliance Checklist for DFW Property Managers | Talley Site Services';
-$description = 'A general overview of ADA-compliant parking stall counts, striping, and signage for commercial properties in Texas.';
+$title = 'ADA Parking Lot Compliance Checklist | Talley Site Services';
+$description = 'A general overview of ADA-compliant parking stall counts, striping, and signage for commercial properties in Texas, plus where to check state-specific rules.';
 $canonical = 'https://www.talleysiteservices.com/blog/ada-parking-lot-compliance-checklist.php';
+$ogImage = 'https://www.talleysiteservices.com/images/ada-accessible-parking-space.jpg';
 include __DIR__ . '/../partials/header.php';
 ?>
 
@@ -28,6 +29,10 @@ echo json_encode([
 <section class="section">
   <div class="container two-col">
     <div>
+      <picture>
+        <source srcset="/images/ada-accessible-parking-space.webp" type="image/webp">
+        <img class="content-img" src="/images/ada-accessible-parking-space.jpg" width="1000" height="1000" loading="lazy" decoding="async" alt="ADA-compliant accessible parking space with blue striping and the international symbol of accessibility">
+      </picture>
       <div class="alert" style="background:#f4f4f5;border:1px solid #d4d4d8;">
         <p style="margin:0;">This is a general overview, not legal advice. Texas projects are also subject to the Texas Accessibility Standards (TAS) enforced by the Texas Department of Licensing and Regulation (TDLR), which can add requirements beyond the federal ADA baseline. Confirm exact requirements for your property with a licensed professional or TDLR before making changes.</p>
       </div>

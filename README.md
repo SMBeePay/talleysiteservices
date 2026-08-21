@@ -19,14 +19,24 @@ services/
   site-repairs.php                 Bollards, signage, fencing, concrete, punch lists
 areas-we-serve.php                 Service area hub (all target cities)
 areas-we-serve/
-  caddo-mills-tx.php
+  caddo-mills-tx.php                Home base
   rockwall-tx.php
+  fate-tx.php
+  royse-city-tx.php
+  greenville-tx.php
   mckinney-tx.php
+  wylie-tx.php
+  garland-tx.php
+blog/
+  index.php                        Resources hub
+  how-often-restripe-parking-lot-texas.php
+  ada-parking-lot-compliance-checklist.php
 partials/
-  header.php                       Shared <head>/nav, sets $title/$description/$canonical per page
+  header.php                       Shared <head>/nav, sets $title/$description/$canonical per page, sitewide LocalBusiness JSON-LD
   footer.php                       Shared footer
 css/style.css
 js/main.js
+images/                            Optimized site photography (JPEG + WebP), see Images section below
 favicon.svg
 robots.txt
 sitemap.xml
@@ -74,6 +84,20 @@ Development happens on `claude/website-github-hostinger-1u0ar6`. Merge into `mai
 `contact.php` posts to `contact-handler.php`, which validates input, strips header-injection characters, and sends mail via PHP's `mail()` to `talley.siteservices@gmail.com`. A hidden honeypot field filters basic bots.
 
 **Known limitation**: PHP's `mail()` deliverability on shared hosting can be inconsistent (messages sometimes land in spam). If leads aren't arriving reliably after launch, consider switching to SMTP-based sending (e.g. PHPMailer with Hostinger's SMTP credentials, or a transactional email service).
+
+## Images
+
+Site photography in `/images` is stock photography (not photos of Talley Site Services' own completed work), sourced from Unsplash and used under the [Unsplash License](https://unsplash.com/license) (free for commercial use, no attribution legally required, but credited here as good practice):
+
+- `parking-lot-striping-aerial.*` — Photo by Tim Meyer on Unsplash
+- `ada-accessible-parking-space.*` — Photo by Seoyoung Choi on Unsplash
+- `asphalt-crack-repair-striping.*` — Photo by Emily Sandoval on Unsplash
+- `parking-lot-line-striping-closeup.*` — Photo by Brian Patrick Tagalog on Unsplash
+- `parking-garage-pavement-markings.*` — Photo by Sven Mieke on Unsplash
+
+Each is provided as both `.jpg` (broad compatibility) and `.webp` (smaller, modern browsers), resized from the original uploads and re-encoded with PHP's GD library — a `<picture>` element serves WebP with a JPEG fallback. GD's encoder is decent but not best-in-class; if page load time matters before launch, re-compressing these with a dedicated tool (e.g. Squoosh, TinyPNG) can likely shave off another 20-30%.
+
+**Replace these with real photos as they become available** — actual completed jobs, the branded truck, real signage — since genuine project photography is a stronger trust signal than stock imagery, and several competitors already use their own project photos.
 
 ## Content notes
 

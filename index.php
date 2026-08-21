@@ -1,6 +1,6 @@
 <?php
-$title = 'Parking Lot Striping & Asphalt Repair in Northeast Dallas-Fort Worth, TX | Talley Site Services';
-$description = 'Talley Site Services provides parking lot striping, asphalt repair, and parking lot maintenance for commercial properties in Caddo Mills, Rockwall, McKinney, and Northeast DFW, TX. Owner-operated. Free estimates.';
+$title = 'Parking Lot Striping & Asphalt Repair | Talley Site Services';
+$description = 'Parking lot striping, asphalt repair, and parking lot maintenance for commercial properties in Northeast Dallas-Fort Worth, TX. Owner-operated. Free estimates.';
 $canonical = 'https://www.talleysiteservices.com/';
 include __DIR__ . '/partials/header.php';
 ?>

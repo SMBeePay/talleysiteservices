@@ -3,6 +3,7 @@ http_response_code(404);
 $title = 'Page Not Found | Talley Site Services';
 $description = 'The page you were looking for could not be found.';
 $canonical = 'https://www.talleysiteservices.com/404.php';
+$noindex = true;
 include __DIR__ . '/partials/header.php';
 ?>
 

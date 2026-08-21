@@ -2,6 +2,7 @@
 $title = 'Thank You | Talley Site Services';
 $description = 'Thanks for contacting Talley Site Services. We will be in touch shortly.';
 $canonical = 'https://www.talleysiteservices.com/thank-you.php';
+$noindex = true;
 include __DIR__ . '/partials/header.php';
 ?>
 

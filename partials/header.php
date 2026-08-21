@@ -1,7 +1,9 @@
 <?php
-$title = $title ?? 'Talley Site Services | Commercial Site Repair & Maintenance in Northeast DFW';
-$description = $description ?? 'Talley Site Services provides parking lot striping, asphalt repair, and parking lot maintenance for commercial properties across Northeast Dallas-Fort Worth, TX.';
+$title = $title ?? 'Talley Site Services | Site Repair & Maintenance in DFW';
+$description = $description ?? 'Talley Site Services provides parking lot striping, asphalt repair, and maintenance for commercial properties across Northeast Dallas-Fort Worth, TX.';
 $canonical = $canonical ?? ('https://www.talleysiteservices.com' . $_SERVER['REQUEST_URI']);
+$ogImage = $ogImage ?? 'https://www.talleysiteservices.com/images/parking-lot-striping-aerial.jpg';
+$noindex = $noindex ?? false;
 ?><!doctype html>
 <html lang="en">
 <head>
@@ -9,11 +11,16 @@ $canonical = $canonical ?? ('https://www.talleysiteservices.com' . $_SERVER['REQ
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title><?= htmlspecialchars($title) ?></title>
 <meta name="description" content="<?= htmlspecialchars($description) ?>">
+<?php if ($noindex): ?>
+<meta name="robots" content="noindex, follow">
+<?php endif; ?>
 <link rel="canonical" href="<?= htmlspecialchars($canonical) ?>">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <meta property="og:title" content="<?= htmlspecialchars($title) ?>">
 <meta property="og:description" content="<?= htmlspecialchars($description) ?>">
+<meta property="og:image" content="<?= htmlspecialchars($ogImage) ?>">
 <meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">

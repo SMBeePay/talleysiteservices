@@ -1,6 +1,6 @@
 <?php
-$title = 'Commercial Site Services | Striping, Asphalt Repair & More | Talley Site Services';
-$description = 'Explore Talley Site Services\' commercial services: parking lot striping, asphalt repair, parking lot maintenance, and site repairs across Northeast Dallas-Fort Worth, TX.';
+$title = 'Commercial Site Services in Northeast DFW | Talley Site';
+$description = 'Talley Site Services offers parking lot striping, asphalt repair, parking lot maintenance, and site repairs across Northeast Dallas-Fort Worth, TX.';
 $canonical = 'https://www.talleysiteservices.com/services/';
 include __DIR__ . '/../partials/header.php';
 ?>

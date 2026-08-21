@@ -1,7 +1,8 @@
 <?php
-$title = 'Parking Lot Striping in Northeast Dallas-Fort Worth, TX | Talley Site Services';
-$description = 'Professional parking lot striping for commercial properties in Caddo Mills, Rockwall, McKinney, and Northeast DFW, TX. New layouts, re-striping, ADA compliance, fire lanes. Free estimates.';
+$title = 'Parking Lot Striping in Northeast DFW, TX | Talley Site';
+$description = 'Professional parking lot striping in Caddo Mills, Rockwall, McKinney, and Northeast DFW, TX. New layouts, re-striping, ADA compliance. Free estimates.';
 $canonical = 'https://www.talleysiteservices.com/services/parking-lot-striping.php';
+$ogImage = 'https://www.talleysiteservices.com/images/ada-accessible-parking-space.jpg';
 include __DIR__ . '/../partials/header.php';
 ?>
 
@@ -16,6 +17,10 @@ include __DIR__ . '/../partials/header.php';
 <section class="section">
   <div class="container two-col">
     <div>
+      <picture>
+        <source srcset="/images/ada-accessible-parking-space.webp" type="image/webp">
+        <img class="content-img" src="/images/ada-accessible-parking-space.jpg" width="1000" height="1000" loading="lazy" decoding="async" alt="ADA-compliant accessible parking space with blue striping and the international symbol of accessibility">
+      </picture>
       <h2>Keep Your Lot Safe, Legal, and Professional</h2>
       <p>Faded or missing lines create liability, confuse customers, and can put a property out of ADA compliance. Talley Site Services provides parking lot striping that keeps your lot organized, compliant, and looking sharp.</p>
 

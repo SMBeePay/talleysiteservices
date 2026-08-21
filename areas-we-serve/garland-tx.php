@@ -1,6 +1,6 @@
 <?php
-$title = 'Parking Lot Striping & Asphalt Repair in Garland, TX | Talley Site Services';
-$description = 'Talley Site Services provides parking lot striping, asphalt repair, and parking lot maintenance for commercial properties in Garland, TX.';
+$title = 'Parking Lot Striping in Garland, TX | Talley Site Services';
+$description = 'Talley Site Services offers parking lot striping, asphalt repair, and parking lot maintenance for commercial properties in Garland, TX. Free estimates.';
 $canonical = 'https://www.talleysiteservices.com/areas-we-serve/garland-tx.php';
 include __DIR__ . '/../partials/header.php';
 ?>

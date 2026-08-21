@@ -1,7 +1,8 @@
 <?php
-$title = 'Site Repairs: Bollards, Signage, Fencing & Concrete | Talley Site Services';
+$title = 'Site Repairs: Bollards, Signage & Fencing | Talley Site';
 $description = 'Bollards, signs & posts, wheel stops, fences & gates, dumpster enclosures, concrete repair, and punch-list site work in Northeast Dallas-Fort Worth, TX.';
 $canonical = 'https://www.talleysiteservices.com/services/site-repairs.php';
+$ogImage = 'https://www.talleysiteservices.com/images/parking-garage-pavement-markings.jpg';
 include __DIR__ . '/../partials/header.php';
 ?>
 
@@ -16,6 +17,10 @@ include __DIR__ . '/../partials/header.php';
 <section class="section">
   <div class="container two-col">
     <div>
+      <picture>
+        <source srcset="/images/parking-garage-pavement-markings.webp" type="image/webp">
+        <img class="content-img" src="/images/parking-garage-pavement-markings.jpg" width="1200" height="801" loading="lazy" decoding="async" alt="Pavement markings and yellow striping in a commercial parking garage">
+      </picture>
       <p>Beyond striping and asphalt, commercial properties accumulate a long list of smaller site needs. Talley Site Services handles these details so you're not coordinating multiple vendors for one punch list.</p>
 
       <div class="grid grid-4" style="margin-top:2rem;">

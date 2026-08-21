@@ -1,6 +1,6 @@
 <?php
-$title = 'Parking Lot Striping & Asphalt Repair in McKinney, TX | Talley Site Services';
-$description = 'Talley Site Services provides parking lot striping, asphalt repair, and parking lot maintenance for commercial properties in McKinney, TX.';
+$title = 'Parking Lot Striping in McKinney, TX | Talley Site Services';
+$description = 'Talley Site Services offers parking lot striping, asphalt repair, and parking lot maintenance for commercial properties in McKinney, TX. Free estimates.';
 $canonical = 'https://www.talleysiteservices.com/areas-we-serve/mckinney-tx.php';
 include __DIR__ . '/../partials/header.php';
 ?>

@@ -1,7 +1,8 @@
 <?php
-$title = 'Asphalt Repair in Northeast Dallas-Fort Worth, TX | Talley Site Services';
+$title = 'Asphalt Repair in Northeast DFW, TX | Talley Site Services';
 $description = 'Commercial asphalt repair in Caddo Mills, Rockwall, McKinney, and Northeast DFW, TX. Pothole patching, crack repair, and surface repairs. Free estimates.';
 $canonical = 'https://www.talleysiteservices.com/services/asphalt-repair.php';
+$ogImage = 'https://www.talleysiteservices.com/images/asphalt-crack-repair-striping.jpg';
 include __DIR__ . '/../partials/header.php';
 ?>
 
@@ -16,6 +17,10 @@ include __DIR__ . '/../partials/header.php';
 <section class="section">
   <div class="container two-col">
     <div>
+      <picture>
+        <source srcset="/images/asphalt-crack-repair-striping.webp" type="image/webp">
+        <img class="content-img" src="/images/asphalt-crack-repair-striping.jpg" width="1200" height="801" loading="lazy" decoding="async" alt="Weathered commercial asphalt parking lot surface with cracking and faded striping in need of repair">
+      </picture>
       <h2>Protect Your Pavement Investment</h2>
       <p>Texas heat, heavy traffic, and water intrusion all take a toll on commercial asphalt. Left unaddressed, small cracks and potholes turn into costly resurfacing projects &mdash; and create trip and vehicle-damage liability along the way. Talley Site Services handles asphalt repair before it becomes a bigger problem.</p>
 

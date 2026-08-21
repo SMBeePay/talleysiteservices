@@ -1,7 +1,8 @@
 <?php
-$title = 'How Often Should You Restripe a Commercial Parking Lot in Texas? | Talley Site Services';
-$description = 'Texas heat and UV exposure fade parking lot striping faster than in milder climates. Learn how often to restripe and the signs it\'s time.';
+$title = 'How Often to Restripe a Parking Lot in Texas | Talley Site';
+$description = 'Texas heat and UV exposure fade parking lot striping faster than in milder climates. Learn how often to restripe and the signs it\'s time for a refresh.';
 $canonical = 'https://www.talleysiteservices.com/blog/how-often-restripe-parking-lot-texas.php';
+$ogImage = 'https://www.talleysiteservices.com/images/asphalt-crack-repair-striping.jpg';
 include __DIR__ . '/../partials/header.php';
 ?>
 
@@ -28,6 +29,10 @@ echo json_encode([
 <section class="section">
   <div class="container two-col">
     <div>
+      <picture>
+        <source srcset="/images/asphalt-crack-repair-striping.webp" type="image/webp">
+        <img class="content-img" src="/images/asphalt-crack-repair-striping.jpg" width="1200" height="801" loading="lazy" decoding="async" alt="Weathered asphalt parking lot with cracking and faded, hard-to-see striping">
+      </picture>
       <p>Parking lot striping doesn't last forever, and it fades faster in North Texas than in most parts of the country. Here's what affects that timeline and how to know when it's time to restripe.</p>
 
       <h2>What Makes Striping Fade Faster in Texas</h2>
