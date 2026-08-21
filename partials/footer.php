@@ -16,6 +16,7 @@
         <li><a href="/services/asphalt-repair.php">Asphalt Repair</a></li>
         <li><a href="/services/parking-lot-maintenance.php">Parking Lot Maintenance</a></li>
         <li><a href="/services/site-repairs.php">Site Repairs &amp; More</a></li>
+        <li><a href="/blog/">Resources</a></li>
       </ul>
     </div>
     <div>

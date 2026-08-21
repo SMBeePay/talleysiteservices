@@ -18,6 +18,40 @@ $canonical = $canonical ?? ('https://www.talleysiteservices.com' . $_SERVER['REQ
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/css/style.css">
+<script type="application/ld+json">
+<?php
+echo json_encode([
+    '@context' => 'https://schema.org',
+    '@type' => 'HomeAndConstructionBusiness',
+    'name' => 'Talley Site Services',
+    'description' => 'Commercial parking lot striping, asphalt repair, and parking lot maintenance in Northeast Dallas-Fort Worth, TX.',
+    'url' => 'https://www.talleysiteservices.com/',
+    'telephone' => '+1-469-274-4977',
+    'email' => 'talley.siteservices@gmail.com',
+    'address' => [
+        '@type' => 'PostalAddress',
+        'addressLocality' => 'Caddo Mills',
+        'addressRegion' => 'TX',
+        'addressCountry' => 'US',
+    ],
+    'areaServed' => [
+        ['@type' => 'City', 'name' => 'Caddo Mills, TX'],
+        ['@type' => 'City', 'name' => 'Rockwall, TX'],
+        ['@type' => 'City', 'name' => 'Royse City, TX'],
+        ['@type' => 'City', 'name' => 'Greenville, TX'],
+        ['@type' => 'City', 'name' => 'McKinney, TX'],
+        ['@type' => 'City', 'name' => 'Wylie, TX'],
+        ['@type' => 'City', 'name' => 'Garland, TX'],
+    ],
+    'makesOffer' => [
+        ['@type' => 'Offer', 'itemOffered' => ['@type' => 'Service', 'name' => 'Parking Lot Striping']],
+        ['@type' => 'Offer', 'itemOffered' => ['@type' => 'Service', 'name' => 'Asphalt Repair']],
+        ['@type' => 'Offer', 'itemOffered' => ['@type' => 'Service', 'name' => 'Parking Lot Maintenance']],
+        ['@type' => 'Offer', 'itemOffered' => ['@type' => 'Service', 'name' => 'Site Repairs (Bollards, Signage, Fencing, Concrete)']],
+    ],
+], JSON_UNESCAPED_SLASHES);
+?>
+</script>
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
@@ -35,6 +69,7 @@ $canonical = $canonical ?? ('https://www.talleysiteservices.com' . $_SERVER['REQ
       <a href="/">Home</a>
       <a href="/services/">Services</a>
       <a href="/areas-we-serve.php">Areas We Serve</a>
+      <a href="/blog/">Resources</a>
       <a href="/about.php">About</a>
       <a href="/contact.php">Contact</a>
     </nav>
