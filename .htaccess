@@ -1,0 +1,8 @@
+ErrorDocument 404 /404.php
+
+<IfModule mod_headers.c>
+  Header set X-Content-Type-Options "nosniff"
+</IfModule>
+
+# Prevent directory listing
+Options -Indexes

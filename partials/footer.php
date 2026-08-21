@@ -1,0 +1,45 @@
+</main>
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div>
+      <div class="brand footer-brand">
+        <span class="brand-name">TALLEY</span><br>
+        <span class="brand-sub">SITE SERVICES</span>
+      </div>
+      <p>Commercial Site Repair &amp; Maintenance</p>
+      <p class="tagline">Site Maintenance. Done Right.</p>
+    </div>
+    <div>
+      <h3>Services</h3>
+      <ul>
+        <li><a href="/services/parking-lot-striping.php">Parking Lot Striping</a></li>
+        <li><a href="/services/asphalt-repair.php">Asphalt Repair</a></li>
+        <li><a href="/services/parking-lot-maintenance.php">Parking Lot Maintenance</a></li>
+        <li><a href="/services/site-repairs.php">Site Repairs &amp; More</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3>Areas We Serve</h3>
+      <ul>
+        <li><a href="/areas-we-serve/caddo-mills-tx.php">Caddo Mills, TX</a></li>
+        <li><a href="/areas-we-serve/rockwall-tx.php">Rockwall, TX</a></li>
+        <li><a href="/areas-we-serve/mckinney-tx.php">McKinney, TX</a></li>
+        <li><a href="/areas-we-serve.php">View All Areas</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3>Contact</h3>
+      <ul>
+        <li><a href="tel:+14692744977">469-274-4977</a></li>
+        <li><a href="mailto:talley.siteservices@gmail.com">talley.siteservices@gmail.com</a></li>
+        <li>Caddo Mills, TX</li>
+      </ul>
+    </div>
+  </div>
+  <div class="container footer-bottom">
+    <p>&copy; <?= date('Y') ?> Talley Site Services. All rights reserved.</p>
+  </div>
+</footer>
+<script src="/js/main.js"></script>
+</body>
+</html>
