@@ -38,6 +38,7 @@ echo json_encode([
         ['@type' => 'City', 'name' => 'Caddo Mills, TX'],
         ['@type' => 'City', 'name' => 'Rockwall, TX'],
         ['@type' => 'City', 'name' => 'Royse City, TX'],
+        ['@type' => 'City', 'name' => 'Fate, TX'],
         ['@type' => 'City', 'name' => 'Greenville, TX'],
         ['@type' => 'City', 'name' => 'McKinney, TX'],
         ['@type' => 'City', 'name' => 'Wylie, TX'],

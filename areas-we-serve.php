@@ -1,6 +1,6 @@
 <?php
 $title = 'Service Area | Northeast Dallas-Fort Worth, TX | Talley Site Services';
-$description = 'Talley Site Services provides parking lot striping, asphalt repair, and parking lot maintenance across Caddo Mills, Rockwall, Royse City, Greenville, McKinney, Wylie, and Garland, TX.';
+$description = 'Talley Site Services provides parking lot striping, asphalt repair, and parking lot maintenance across Caddo Mills, Rockwall, Royse City, Fate, Greenville, McKinney, Wylie, and Garland, TX.';
 $canonical = 'https://www.talleysiteservices.com/areas-we-serve.php';
 include __DIR__ . '/partials/header.php';
 ?>
@@ -37,6 +37,10 @@ include __DIR__ . '/partials/header.php';
       <div class="city-card is-active">
         <h3><a href="/areas-we-serve/royse-city-tx.php">Royse City, TX</a></h3>
         <p>Rockwall / Hunt County.</p>
+      </div>
+      <div class="city-card is-active">
+        <h3><a href="/areas-we-serve/fate-tx.php">Fate, TX</a></h3>
+        <p>Rockwall County.</p>
       </div>
       <div class="city-card is-active">
         <h3><a href="/areas-we-serve/greenville-tx.php">Greenville, TX</a></h3>
