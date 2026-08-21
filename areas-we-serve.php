@@ -34,20 +34,20 @@ include __DIR__ . '/partials/header.php';
         <h3><a href="/areas-we-serve/mckinney-tx.php">McKinney, TX</a></h3>
         <p>Collin County.</p>
       </div>
-      <div class="city-card">
-        <h3>Royse City, TX</h3>
+      <div class="city-card is-active">
+        <h3><a href="/areas-we-serve/royse-city-tx.php">Royse City, TX</a></h3>
         <p>Rockwall / Hunt County.</p>
       </div>
-      <div class="city-card">
-        <h3>Greenville, TX</h3>
+      <div class="city-card is-active">
+        <h3><a href="/areas-we-serve/greenville-tx.php">Greenville, TX</a></h3>
         <p>Hunt County.</p>
       </div>
-      <div class="city-card">
-        <h3>Wylie, TX</h3>
+      <div class="city-card is-active">
+        <h3><a href="/areas-we-serve/wylie-tx.php">Wylie, TX</a></h3>
         <p>Collin County.</p>
       </div>
-      <div class="city-card">
-        <h3>Garland, TX</h3>
+      <div class="city-card is-active">
+        <h3><a href="/areas-we-serve/garland-tx.php">Garland, TX</a></h3>
         <p>Dallas County.</p>
       </div>
     </div>

@@ -43,6 +43,7 @@ include __DIR__ . '/../partials/header.php';
       </ul>
       <h3 style="margin-top:1.5rem;">Nearby Areas</h3>
       <ul>
+        <li><a href="/areas-we-serve/royse-city-tx.php">Royse City, TX</a></li>
         <li><a href="/areas-we-serve/caddo-mills-tx.php">Caddo Mills, TX</a></li>
         <li><a href="/areas-we-serve/mckinney-tx.php">McKinney, TX</a></li>
         <li><a href="/areas-we-serve.php">View All Areas</a></li>
