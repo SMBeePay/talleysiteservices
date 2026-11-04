@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-$recipient = 'info@example.com';
+$recipient = 'cody@talleysiteservices.com';
 
 function clean_field(string $value): string
 {

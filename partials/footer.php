@@ -33,8 +33,8 @@
     <div>
       <h3>Contact</h3>
       <ul>
-        <li><a href="tel:+15555550100">555-555-0100</a></li>
-        <li><a href="mailto:info@example.com">info@example.com</a></li>
+        <li><a href="tel:+19729148884">972-914-8884</a></li>
+        <li><a href="mailto:cody@talleysiteservices.com">cody@talleysiteservices.com</a></li>
         <li>Caddo Mills, TX</li>
       </ul>
     </div>

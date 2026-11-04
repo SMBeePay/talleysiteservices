@@ -35,8 +35,8 @@ echo json_encode([
     'name' => 'Talley Site Services',
     'description' => 'Commercial parking lot striping, asphalt repair, and parking lot maintenance in Northeast Dallas-Fort Worth, TX.',
     'url' => 'https://www.talleysiteservices.com/',
-    'telephone' => '+1-555-555-0100',
-    'email' => 'info@example.com',
+    'telephone' => '+1-972-914-8884',
+    'email' => 'cody@talleysiteservices.com',
     'address' => [
         '@type' => 'PostalAddress',
         'addressLocality' => 'Caddo Mills',
@@ -85,9 +85,9 @@ echo json_encode([
       <a href="/about.php">About</a>
       <a href="/contact.php">Contact</a>
     </nav>
-    <a class="phone-cta" href="tel:+15555550100">
+    <a class="phone-cta" href="tel:+19729148884">
       <span class="phone-label">Call Now</span>
-      <span class="phone-number">555-555-0100</span>
+      <span class="phone-number">972-914-8884</span>
     </a>
   </div>
 </header>

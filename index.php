@@ -12,7 +12,7 @@ include __DIR__ . '/partials/header.php';
     <p class="lede">Talley Site Services keeps commercial parking lots safe, compliant, and looking sharp &mdash; striping, asphalt repair, and ongoing maintenance for property managers and business owners across Northeast DFW.</p>
     <div class="hero-ctas">
       <a class="btn btn-primary" href="/contact.php">Request a Free Estimate</a>
-      <a class="btn btn-outline" href="tel:+15555550100">Call 555-555-0100</a>
+      <a class="btn btn-outline" href="tel:+19729148884">Call 972-914-8884</a>
     </div>
   </div>
 </section>
