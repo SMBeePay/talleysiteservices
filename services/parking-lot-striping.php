@@ -51,9 +51,10 @@ include __DIR__ . '/../partials/header.php';
       <a class="btn btn-primary" href="/contact.php">Free Estimate</a>
       <h3 style="margin-top:1.5rem;">Related Services</h3>
       <ul>
-        <li><a href="/services/asphalt-repair.php">Asphalt Repair</a></li>
-        <li><a href="/services/parking-lot-maintenance.php">Parking Lot Maintenance</a></li>
-        <li><a href="/services/site-repairs.php">Site Repairs &amp; More</a></li>
+        <li><a href="/services/sign-installation-repair.php">Sign Installation &amp; Repair</a></li>
+        <li><a href="/services/bollard-installation-repair.php">Bollard Installation &amp; Repair</a></li>
+        <li><a href="/services/fence-gate-repair.php">Fence &amp; Gate Repair</a></li>
+        <li><a href="/services/commercial-lot-mowing.php">Commercial Lot Mowing</a></li>
       </ul>
       <h3 style="margin-top:1.5rem;">Service Area</h3>
       <ul>

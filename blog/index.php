@@ -1,6 +1,6 @@
 <?php
 $title = 'Parking Lot Striping Resources & Guides | Talley Site';
-$description = 'Guides on parking lot striping, asphalt repair, and ADA compliance for commercial property owners and managers in Northeast Dallas-Fort Worth, TX.';
+$description = 'Guides on parking lot striping and ADA compliance for commercial property owners and managers in Northeast Dallas-Fort Worth, TX.';
 $canonical = 'https://www.talleysiteservices.com/blog/';
 include __DIR__ . '/../partials/header.php';
 ?>

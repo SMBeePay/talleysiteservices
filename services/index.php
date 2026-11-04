@@ -1,6 +1,6 @@
 <?php
 $title = 'Commercial Site Services in Northeast DFW | Talley Site';
-$description = 'Talley Site Services offers parking lot striping, asphalt repair, parking lot maintenance, and site repairs across Northeast Dallas-Fort Worth, TX.';
+$description = 'Talley Site Services offers parking lot striping, signage, bollards, fencing, and lot mowing for commercial properties across Northeast Dallas-Fort Worth, TX.';
 $canonical = 'https://www.talleysiteservices.com/services/';
 include __DIR__ . '/../partials/header.php';
 ?>
@@ -16,39 +16,35 @@ include __DIR__ . '/../partials/header.php';
 <section class="section">
   <div class="container">
     <div class="section-head">
-      <span class="eyebrow">Core Services</span>
-      <h2>Parking Lot Focused Work</h2>
+      <span class="eyebrow">What We Do</span>
+      <h2>Our Services</h2>
     </div>
-    <div class="grid grid-3">
-      <div class="card">
-        <h3>Parking Lot Striping</h3>
-        <p>New layouts, re-striping, ADA-compliant stalls, fire lanes, arrows, and stencils.</p>
-        <a href="/services/parking-lot-striping.php">Learn More &rarr;</a>
-      </div>
-      <div class="card">
-        <h3>Asphalt Repair</h3>
-        <p>Pothole patching, crack repair, and surface repairs for commercial lots.</p>
-        <a href="/services/asphalt-repair.php">Learn More &rarr;</a>
-      </div>
-      <div class="card">
-        <h3>Parking Lot Maintenance</h3>
-        <p>Ongoing upkeep that protects your pavement investment.</p>
-        <a href="/services/parking-lot-maintenance.php">Learn More &rarr;</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="section section-alt">
-  <div class="container">
-    <div class="section-head">
-      <span class="eyebrow">Additional Services</span>
-      <h2>Site Repairs &amp; Details</h2>
-    </div>
-    <div class="card" style="max-width:70ch;">
-      <h3>Bollards, Signage, Fencing, Concrete &amp; Punch Lists</h3>
-      <p>Bollards, signs &amp; posts, wheel stops, fences &amp; gates, dumpster enclosures, concrete work, and general site repairs &mdash; the details that keep a property functional and compliant.</p>
-      <a href="/services/site-repairs.php">Learn More &rarr;</a>
+    <div class="service-list">
+      <a class="service-list-item" href="/services/parking-lot-striping.php">
+        <span class="num">01</span>
+        <span class="name">Parking Lot Striping</span>
+        <span>&rarr;</span>
+      </a>
+      <a class="service-list-item" href="/services/sign-installation-repair.php">
+        <span class="num">02</span>
+        <span class="name">Sign Installation &amp; Repair</span>
+        <span>&rarr;</span>
+      </a>
+      <a class="service-list-item" href="/services/bollard-installation-repair.php">
+        <span class="num">03</span>
+        <span class="name">Bollard Installation &amp; Repair</span>
+        <span>&rarr;</span>
+      </a>
+      <a class="service-list-item" href="/services/fence-gate-repair.php">
+        <span class="num">04</span>
+        <span class="name">Fence &amp; Gate Repair</span>
+        <span>&rarr;</span>
+      </a>
+      <a class="service-list-item" href="/services/commercial-lot-mowing.php">
+        <span class="num">05</span>
+        <span class="name">Commercial Lot Mowing</span>
+        <span>&rarr;</span>
+      </a>
     </div>
   </div>
 </section>

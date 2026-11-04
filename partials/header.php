@@ -1,6 +1,6 @@
 <?php
 $title = $title ?? 'Talley Site Services | Site Repair & Maintenance in DFW';
-$description = $description ?? 'Talley Site Services provides parking lot striping, asphalt repair, and maintenance for commercial properties across Northeast Dallas-Fort Worth, TX.';
+$description = $description ?? 'Talley Site Services provides parking lot striping, signage, bollards, fencing, and lot mowing for commercial properties across Northeast Dallas-Fort Worth, TX.';
 $canonical = $canonical ?? ('https://www.talleysiteservices.com' . $_SERVER['REQUEST_URI']);
 $ogImage = $ogImage ?? 'https://www.talleysiteservices.com/images/parking-lot-striping-aerial.jpg';
 $noindex = $noindex ?? false;
@@ -33,7 +33,7 @@ echo json_encode([
     '@context' => 'https://schema.org',
     '@type' => 'HomeAndConstructionBusiness',
     'name' => 'Talley Site Services',
-    'description' => 'Commercial parking lot striping, asphalt repair, and parking lot maintenance in Northeast Dallas-Fort Worth, TX.',
+    'description' => 'Commercial parking lot striping, signage, bollards, fencing, and lot mowing in Northeast Dallas-Fort Worth, TX.',
     'url' => 'https://www.talleysiteservices.com/',
     'telephone' => '+1-972-914-8884',
     'email' => 'cody@talleysiteservices.com',
@@ -55,9 +55,10 @@ echo json_encode([
     ],
     'makesOffer' => [
         ['@type' => 'Offer', 'itemOffered' => ['@type' => 'Service', 'name' => 'Parking Lot Striping']],
-        ['@type' => 'Offer', 'itemOffered' => ['@type' => 'Service', 'name' => 'Asphalt Repair']],
-        ['@type' => 'Offer', 'itemOffered' => ['@type' => 'Service', 'name' => 'Parking Lot Maintenance']],
-        ['@type' => 'Offer', 'itemOffered' => ['@type' => 'Service', 'name' => 'Site Repairs (Bollards, Signage, Fencing, Concrete)']],
+        ['@type' => 'Offer', 'itemOffered' => ['@type' => 'Service', 'name' => 'Sign Installation & Repair']],
+        ['@type' => 'Offer', 'itemOffered' => ['@type' => 'Service', 'name' => 'Bollard Installation & Repair']],
+        ['@type' => 'Offer', 'itemOffered' => ['@type' => 'Service', 'name' => 'Fence & Gate Repair']],
+        ['@type' => 'Offer', 'itemOffered' => ['@type' => 'Service', 'name' => 'Commercial Lot Mowing']],
     ],
 ], JSON_UNESCAPED_SLASHES);
 ?>

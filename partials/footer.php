@@ -15,9 +15,10 @@
       <h3>Services</h3>
       <ul>
         <li><a href="/services/parking-lot-striping.php">Parking Lot Striping</a></li>
-        <li><a href="/services/asphalt-repair.php">Asphalt Repair</a></li>
-        <li><a href="/services/parking-lot-maintenance.php">Parking Lot Maintenance</a></li>
-        <li><a href="/services/site-repairs.php">Site Repairs &amp; More</a></li>
+        <li><a href="/services/sign-installation-repair.php">Sign Installation &amp; Repair</a></li>
+        <li><a href="/services/bollard-installation-repair.php">Bollard Installation &amp; Repair</a></li>
+        <li><a href="/services/fence-gate-repair.php">Fence &amp; Gate Repair</a></li>
+        <li><a href="/services/commercial-lot-mowing.php">Commercial Lot Mowing</a></li>
         <li><a href="/blog/">Resources</a></li>
       </ul>
     </div>

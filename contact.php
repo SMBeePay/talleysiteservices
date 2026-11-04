@@ -1,6 +1,6 @@
 <?php
 $title = 'Contact Talley Site Services | Free Estimate in DFW, TX';
-$description = 'Request a free estimate from Talley Site Services for parking lot striping, asphalt repair, or parking lot maintenance in Northeast Dallas-Fort Worth, TX.';
+$description = 'Request a free estimate from Talley Site Services for parking lot striping, signage, bollards, fencing, or lot mowing in Northeast Dallas-Fort Worth, TX.';
 $canonical = 'https://www.talleysiteservices.com/contact.php';
 
 $errors = [];

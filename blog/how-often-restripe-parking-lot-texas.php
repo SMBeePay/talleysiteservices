@@ -60,7 +60,6 @@ echo json_encode([
       <h3>Related</h3>
       <ul>
         <li><a href="/services/parking-lot-striping.php">Parking Lot Striping</a></li>
-        <li><a href="/services/parking-lot-maintenance.php">Parking Lot Maintenance</a></li>
         <li><a href="/blog/ada-parking-lot-compliance-checklist.php">ADA Compliance Checklist</a></li>
       </ul>
       <a class="btn btn-primary" href="/contact.php">Free Estimate</a>

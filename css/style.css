@@ -372,6 +372,71 @@ section.section-alt {
   margin: 0;
 }
 
+/* Numbered service list */
+.service-list {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--gray-200);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.service-list-item {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  padding: 1.1rem 1.5rem;
+  background: var(--white);
+  border-bottom: 1px solid var(--gray-200);
+}
+
+.service-list-item:last-child {
+  border-bottom: none;
+}
+
+.service-list-item:nth-child(even) {
+  background: var(--gray-100);
+}
+
+.service-list-item .num {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  border-radius: 6px;
+  background: var(--red);
+  color: var(--white);
+  font-family: var(--font-head);
+  font-weight: 600;
+  font-size: 1.05rem;
+}
+
+.service-list-item .name {
+  font-family: var(--font-head);
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 1.05rem;
+  letter-spacing: 0.02em;
+  color: var(--black);
+  flex-grow: 1;
+}
+
+a.service-list-item {
+  text-decoration: none;
+  transition: background-color 0.15s ease;
+}
+
+a.service-list-item:hover {
+  background: var(--gray-100);
+  text-decoration: none;
+}
+
+a.service-list-item:hover .name {
+  color: var(--red);
+}
+
 /* CTA band */
 .cta-band {
   background: var(--red);
