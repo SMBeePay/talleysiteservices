@@ -1,6 +1,6 @@
 # Talley Site Services
 
-Marketing website for Talley Site Services — commercial parking lot striping, asphalt repair, and parking lot maintenance in Northeast Dallas-Fort Worth, TX.
+Marketing website for Talley Site Services — commercial parking lot striping, signage, bollards, fencing, and lot mowing in Northeast Dallas-Fort Worth, TX.
 
 ## Project structure
 
@@ -8,15 +8,16 @@ Marketing website for Talley Site Services — commercial parking lot striping, 
 index.php                          Home
 about.php
 contact.php                        Contact form (posts to contact-handler.php)
-contact-handler.php                Server-side form handler (PHP mail())
+contact-handler.php                Server-side form handler (PHPMailer via SMTP, falls back to mail() if unconfigured)
 thank-you.php
 404.php
 services/
   index.php                        Services overview
   parking-lot-striping.php
-  asphalt-repair.php
-  parking-lot-maintenance.php
-  site-repairs.php                 Bollards, signage, fencing, concrete, punch lists
+  sign-installation-repair.php
+  bollard-installation-repair.php
+  fence-gate-repair.php
+  commercial-lot-mowing.php
 areas-we-serve.php                 Service area hub (all target cities)
 areas-we-serve/
   caddo-mills-tx.php                Home base
@@ -34,6 +35,10 @@ blog/
 partials/
   header.php                       Shared <head>/nav, sets $title/$description/$canonical per page, sitewide LocalBusiness JSON-LD
   footer.php                       Shared footer
+lib/phpmailer/                     Vendored PHPMailer source (3 files: PHPMailer.php, SMTP.php, Exception.php)
+config/
+  smtp.example.php                 Template for the contact form's SMTP credentials — copy to smtp.php on the server
+  smtp.php                         Real credentials (gitignored, created directly on the server, never committed)
 css/style.css
 js/main.js
 images/                            Optimized site photography (JPEG + WebP), see Images section below
@@ -41,10 +46,16 @@ images/brand/                      Web-ready logo + favicon files, see Brand Ass
 brand-assets/                      Source/print logo files (not served on the live site), see Brand Assets section below
 robots.txt
 sitemap.xml
-.htaccess                          404 handling, directory listing off
+.htaccess                          404 handling, directory listing off, redirects old domain + non-www to canonical www
 ```
 
 **This site requires PHP** (used for shared header/footer includes and the contact form). Hostinger shared hosting supports PHP by default, so no extra setup is needed on their end. It cannot be previewed by just opening the `.php` files in a browser — run a local PHP server to preview: `php -S localhost:8000` from the project root, then visit `http://localhost:8000`.
+
+## Hosting status
+
+**Live** at [talleysiteservices.com](https://www.talleysiteservices.com), hosted on Hostinger shared hosting with Git auto-deploy from this repo's `claude/website-github-hostinger-1u0ar6` branch (hPanel currently tracks that branch, not `main` — keep them in sync, or repoint hPanel's Git deployment at `main` for convention). The domain's nameservers point to Hostinger (`nova.dns-parking.com` / `cosmos.dns-parking.com`), which also hosts `cody@talleysiteservices.com`'s mailbox (MX → `mx1/mx2.hostinger.com`) and the domain's SPF record. SSL is active.
+
+The site was originally developed under a temporary placeholder domain, `dfwparkinglotservices.com` (also on this Hostinger account). `.htaccess` now 301-redirects that domain — and the bare `talleysiteservices.com` apex — to `https://www.talleysiteservices.com`, to avoid duplicate content across hostnames.
 
 ## Deploying to Hostinger
 
@@ -56,35 +67,26 @@ git commit -m "Update site"
 git push -u origin <branch-name>
 ```
 
-### 2. Connect Hostinger to this GitHub repo (one-time setup)
+### 2. Auto-deploy
 
-1. Log in to [hPanel](https://hpanel.hostinger.com).
-2. Go to **Websites** → select your site → **Advanced** → **Git**.
-3. Click **Create a new repository**.
-4. Choose **GitHub** and authorize Hostinger to access your GitHub account.
-5. Set:
-   - **Repository**: `SMBeePay/talleysiteservices`
-   - **Branch**: the branch you want live (commonly `main`)
-   - **Directory**: `public_html`
-6. Save. Hostinger will pull the repo into that directory.
-
-### 3. Deploy updates
-
-After pushing new commits, go back to **Git** in hPanel and click **Deploy** (or enable auto-deploy on push if your plan offers it).
-
-### 4. Point the domain at Hostinger
-
-In hPanel, under **Domains**, point your domain to Hostinger and attach it to this website. Update `$canonical` values and `sitemap.xml`/`robots.txt` if the live domain differs from `talleysiteservices.com`.
+Hostinger auto-deploys on push from the connected branch (see "Hosting status" above) — no manual "Deploy" click needed unless auto-deploy gets disabled, in which case use **Websites → this site → Deployments → Deploy** in hPanel.
 
 ### Note on branches
 
-Development happens on `claude/website-github-hostinger-1u0ar6`. Merge into `main` when ready to go live, and point Hostinger's Git deployment at `main`.
+Development happens on `claude/website-github-hostinger-1u0ar6`, which is also what's currently deployed. Keep `main` fast-forwarded to match it (or switch Hostinger's Git deployment to track `main` instead, for convention).
 
 ## Contact form
 
-`contact.php` posts to `contact-handler.php`, which validates input, strips header-injection characters, and sends mail via PHP's `mail()` to the address in `$recipient` (`cody@talleysiteservices.com`). A hidden honeypot field filters basic bots.
+`contact.php` posts to `contact-handler.php`, which validates input, strips header-injection characters, and sends mail to `cody@talleysiteservices.com` via **PHPMailer over authenticated SMTP** (vendored at `lib/phpmailer/` — 3 source files, no Composer dependency). A hidden honeypot field filters basic bots.
 
-**Known limitation**: PHP's `mail()` deliverability on shared hosting can be inconsistent (messages sometimes land in spam). If leads aren't arriving reliably after launch, consider switching to SMTP-based sending (e.g. PHPMailer with Hostinger's SMTP credentials, or a transactional email service).
+**Why SMTP instead of PHP's `mail()`**: `mail()` was the original implementation, but in production it reported success while the message never arrived (no inbox, no spam folder) — a known failure mode on shared hosting, where `mail()` only confirms the message was handed to the local queue, not that it was actually delivered. Authenticated SMTP against the mailbox's own provider is far more reliable.
+
+**Required server-side setup** (one-time, not handled by git deploy — credentials can't be committed):
+1. In Hostinger's Email section, create a dedicated sending mailbox, e.g. `website@talleysiteservices.com` (recommended over reusing Cody's personal mailbox password in a script).
+2. Via Hostinger's File Manager, copy `config/smtp.example.php` to `config/smtp.php` **directly on the server** and fill in that mailbox's real password. `config/smtp.php` is gitignored and must never be committed.
+3. Without `config/smtp.php` present, the handler falls back to plain `mail()` — this is what runs during local development (`php -S localhost:8000`), where no real SMTP credentials exist.
+
+After setup, test via the live contact form and confirm the email actually lands in `cody@talleysiteservices.com`'s inbox.
 
 ## Images
 
@@ -120,9 +122,9 @@ Copy is intentionally conservative — no invented years-in-business, project co
 
 The page architecture (service pages + city pages) is built to compete with local competitors (ppm.us, beelineservices.com, pmpstriping.com, canddservicesinc.com), but on-page content is only part of ranking locally. Fastest-moving levers, roughly in priority order:
 
-1. **Claim and fully build out the Google Business Profile** (currently unclaimed) — category, service area, phone, hours, photos, and services list matching the site. This affects Google's local pack faster than on-page SEO alone.
+1. **Fully build out the Google Business Profile** (Cody has claimed it) — category, service area, phone, hours, photos, and services list matching the site's 5 official services.
 2. **Start collecting reviews** on Google as soon as jobs are completed — review count/recency is a major local ranking factor and the site currently has zero, unlike all four competitors.
 3. **NAP-consistent citations** (name/address/phone matching exactly) on major directories — Bing Places, Apple Maps, Yelp, industry directories.
-4. **Expand city pages** beyond Caddo Mills/Rockwall/McKinney to Royse City, Greenville, Wylie, and Garland once there's real project content (photos, specifics) for each — avoids thin/duplicate-content pages that can hurt more than help.
+4. **Expand city pages** beyond Caddo Mills/Rockwall/McKinney to Royse City, Greenville, Wylie, Fate, and Garland once there's real project content (photos, specifics) for each — avoids thin/duplicate-content pages that can hurt more than help.
 5. **Backlinks** — local business associations, chamber of commerce, supplier/partner sites, press mentions.
-6. Set up **Google Search Console** and submit `sitemap.xml` once the domain is live.
+6. Set up **Google Search Console** for `talleysiteservices.com` and submit `sitemap.xml` — the site is live now, so this is ready to do.
