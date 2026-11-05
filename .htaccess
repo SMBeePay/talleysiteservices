@@ -1,3 +1,13 @@
+RewriteEngine On
+
+# Redirect the old placeholder domain to the real one, preserving the path
+RewriteCond %{HTTP_HOST} ^(www\.)?dfwparkinglotservices\.com$ [NC]
+RewriteRule ^(.*)$ https://www.talleysiteservices.com/$1 [R=301,L]
+
+# Force the canonical www host on the real domain
+RewriteCond %{HTTP_HOST} ^talleysiteservices\.com$ [NC]
+RewriteRule ^(.*)$ https://www.talleysiteservices.com/$1 [R=301,L]
+
 ErrorDocument 404 /404.php
 
 <IfModule mod_headers.c>
