@@ -82,7 +82,7 @@ Development happens on `claude/website-github-hostinger-1u0ar6`, which is also w
 **Why SMTP instead of PHP's `mail()`**: `mail()` was the original implementation, but in production it reported success while the message never arrived (no inbox, no spam folder) — a known failure mode on shared hosting, where `mail()` only confirms the message was handed to the local queue, not that it was actually delivered. Authenticated SMTP against the mailbox's own provider is far more reliable.
 
 **Required server-side setup** (one-time, not handled by git deploy — credentials can't be committed):
-1. In Hostinger's Email section, create a dedicated sending mailbox, e.g. `website@talleysiteservices.com` (recommended over reusing Cody's personal mailbox password in a script).
+1. Sends via `cody@dfwparkinglotservices.com` — `talleysiteservices.com` isn't registered through this Hostinger account (only parked/DNS-pointed here), so Hostinger's email UI doesn't offer it as a mailbox domain. The sending mailbox lives on `dfwparkinglotservices.com` instead; this only affects what the SMTP server authenticates as, not anything a visitor sees, and the lead still always lands in `cody@talleysiteservices.com`.
 2. Via Hostinger's File Manager, copy `config/smtp.example.php` to `config/smtp.php` **directly on the server** and fill in that mailbox's real password. `config/smtp.php` is gitignored and must never be committed.
 3. Without `config/smtp.php` present, the handler falls back to plain `mail()` — this is what runs during local development (`php -S localhost:8000`), where no real SMTP credentials exist.
 
